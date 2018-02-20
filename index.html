@@ -1,24 +1,44 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
 <head>
-	<title>Johnson Gaming</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>Scroll Fixed Bar Test #75</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
-<body style="background-image: url(BG.png); background-size: cover; background-repeat: no-repeat; background-position: center;">
-	<div class="container">
-		<div class="nav">
-			<img src="180202-Rich-Brian-Amen-640x640.jpg" width="240" height="240"/>
-			<p>Annoucements</p>
-			<p>Services</p>
-			<p>Games List</p>
-			<p>ABOUT</p>
-		</div>
+<body>
+<section id="screen1">
 
-		<div class="main">
-			<header><h1><br/>JOHNSON GAMING Internet Cafe</h1></header>
-			<div id="text"><h2>SDFGHJKL:SDFGHJKLSDFGHJKL</h2></div>
-		</div>
-	</div>
-	<footer id="container">&copy; 2018, JOHNSON GAMING</footer>
+	<img src="logochigga.jpg" height="350" width="350">
+
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Games List</a></li>
+			<li><a href="#">Branches</a></li>
+			<li><a href="#">ABOUT US</a></li>
+		</ul>
+	</nav>
+
+</section>
+	
+<section id="screen2">
+</section>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+   $(document).ready(function(){
+	   $(window).bind('scroll', function() {
+	   var navHeight = $( window ).height() - 70;
+			 if ($(window).scrollTop() > navHeight) {
+				 $('nav').addClass('fixed');
+			 }
+			 else {
+				 $('nav').removeClass('fixed');
+			 }
+		});
+	});
+</script>
+
 </body>
 </html>
